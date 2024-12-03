@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="styles.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Frajola's</title>
+</head>
+<body>
+    <header>
+        <h2 class="frajolas">Frajola's Minimercado</h2>
+          <a href="index.html">
+            <img src="imagens\logotipo.png" alt="Frajola's Minimercado" width="250" height="250">
+          </a>
+        <nav>
+          <a href="hortifruti.html">| Setor HortiFruti |</a>
+          <a href="alimentos.html">| Alimentos Não Perecíveis |</a>
+          <a href="higielimp.html">| Higiene e Limpeza |</a>
+          <a href="servicos.html">| Serviços |</a>
+        </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row">
+            <!-- Coluna Lateral (Menu) -->
+            <aside class="col-md-3 bg-light p-3">
+              <h4 class="menu">Menu</h4>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="btn btn-warning">Home</a></li>
+                <li><hr/></li>
+                <li><a href="cadastro.html" class="btn btn-warning">Cadastro</a></li>
+                <li><hr/></li>
+                <li><a href="carrinho.html" class="btn btn-warning">Carrinho de Compras</a>
+                </li>
+              </ul>
+            </aside>
+            <!-- Coluna Principal (Conteúdo) -->
+            <main class="col-md-9">          
+                <div class="checkout-panel">
+                    <div class="panel-body">
+                      <h2 class="title">Finalizar Compra</h2>
+                  
+                      <!-- Barra de Progresso -->
+                      <div class="progress-bar">
+                        <div class="step active"></div>
+                        <div class="step active"></div>
+                        <div class="step"></div>
+                        <div class="step"></div>
+                      </div>
+                  
+                      <!-- Resumo do Pedido -->
+                      <div class="order-summary">
+                        <h3>Resumo do Pedido</h3>
+                        <p>Total: R$ <span id="total-value">0.00</span></p>
+                      </div>
+                  
+                      <!-- Métodos de Pagamento -->
+                      <div class="payment-method">
+                        <label for="card" class="method card">
+                          <div class="card-logos">
+                            <img src="imagens/visa_logo.png"/>
+                            <img src="imagens/mastercard_logo.png"/>
+                          </div>
+                          <div class="radio-input">
+                            <input id="card" type="radio" name="payment">
+                            Pagar com Cartão de Crédito
+                          </div>
+                        </label>
+                  
+                        <label for="pix" class="method pix">
+                          <img src="imagens/pix_logo.png"/>
+                          <div class="radio-input">
+                            <input id="pix" type="radio" name="payment">
+                            Pagar com Pix
+                          </div>
+                        </label>
+                      </div>
+                  
+                      <!-- Campos de Dados -->
+                      <div class="input-fields">
+                        <div class="column-1">
+                          <label for="cardholder">Nome no Cartão</label>
+                          <input type="text" id="cardholder"/>
+                  
+                          <div class="small-inputs">
+                            <div>
+                              <label for="date">Data de Validade</label>
+                              <input type="text" id="date"/>
+                            </div>
+                  
+                            <div>
+                              <label for="verification">CVV / CVC *</label>
+                              <input type="password" id="verification"/>
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <div class="column-2">
+                          <label for="cardnumber">Número do Cartão</label>
+                          <input type="password" id="cardnumber"/>
+                          <span class="info">* O CVV ou CVC está no verso do cartão.</span>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Rodapé -->
+                    <div class="panel-footer">
+                      <button class="btn back-btn">Voltar</button>
+                      <button class="btn next-btn">Finalizar Compra</button>
+                    </div>
+                  </div>
+    </main>
+    <hr/>
+    <footer>
+      <p>Entre em contato conosco:</p>
+      <div>
+          <img src="imagens\whatsapp.png" alt="WhatsApp" width="30" height="30">
+          <span>WhatsApp: (51) 99999-9999</span>
+      </div>
+      <div>
+          <img src="imagens\maps.png" alt="Google Maps" width="30" height="30">
+          <span>Endereço: Avenida Garfield, 100, bairro Centro, Porto Alegre/RS, CEP 99999-999</span>
+      </div>
+      <div>
+          <span>Nossas Redes: </span>
+          <img src="imagens\gmail.png" alt="Gmail" width="30" height="30">
+          <img src="imagens\insta.png" alt="Instagram" width="30" height="30">
+          <img src="imagens\face.png" alt="Facebook" width="30" height="30">
+          <img src="imagens\twitter.png" alt="Twitter" width="30" height="30">
+      </div>
+      <p>&copy; 2024 Frajola's Minimercado</p>
+      <hr/>
+      <nav>
+          <a href="hortifruti.html">| Setor Hortifruti |</a>
+          <a href="alimentos.html">| Alimentos Não Perecíveis |</a>
+          <a href="higielimp.html">| Higiene e Limpeza |</a>
+          <a href="servicos.html">| Serviços |</a>
+      </nav>
+    </footer>
+          <script src="./renderer.js"></script>
+          <script src="cart.js"></script>    
+</body>
+</html>
