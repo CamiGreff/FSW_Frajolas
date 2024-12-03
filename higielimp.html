@@ -2,15 +2,17 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="styles.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <title>Frajola's</title>
 </head>
 <body>
     <header>
-        <h1 class="frajolas">Frajola's Minimercado</h1>
+        <h2 class="frajolas">Frajola's Minimercado</h2>
           <a href="index.html">
-            <img src="imagens\logotipo.png" alt="Frajola's Minimercado" width="300" height="300">
+            <img src="imagens\logotipo.png" alt="Frajola's Minimercado" width="250" height="250">
           </a>
         <nav>
           <a href="hortifruti.html">| Setor HortiFruti |</a>
@@ -21,47 +23,134 @@
       </header>
       <hr/>
       <main>
-        <section>
-            <a href="higielimp.html">
-              <h3>Higiene e Limpeza</h3>
-              <img src="imagens\higilimp.png" alt="Higiene e Limpeza" width="300" height="300">
-              
-            </a>
-        <hr/>
-        <h2>HIGIENE</h2>
-            <div class="sabonete">
-              <img src="imagens\sabonete.png" alt="Sabonete" width="200" height="200">
-              <p><b>SABONETE EM BARRA:</b> Vendido em pacote com 5 unidades.</p>
-              <p>Valor: R$15,10</p>
-            </div>
-            <div class="shampoo">
-              <img src="imagens\shampoo.png" alt="Shampoo" width="200" height="200">
-              <p><b>SHAMPOO PARA CABELOS SECOS:</b> Vendido em embalagem com 355mL.</p>
-              <p>Valor: R$23,00</p>
-            </div>
-            <div class="cremedental">
-              <img src="imagens\cremedental.jpeg" alt="Creme Dental" width="200" height="200">
-              <p><b>CREME DENTAL ANTICÁRIES:</b> Vendido em embalagem de 90g.</p>
-              <p>Valor: R$6,00</p>
-            </div>
-            <hr/>
-            <h2>LIMPEZA</h2>
-            <div class="desinfetante">
-              <img src="imagens\desinfetante.jpg" alt="Desinfetante" width="200" height="200">
-              <p><b>DESINFETANTE LÍQUIDO:</b> Vendido em embalagem de 500mL.</p>
-              <p>Valor: R$10,20</p>
-            </div>
-            <div class="sabaopo">
-              <img src="imagens\sabaoempo.jpg" alt="Sabão em Pó" width="200" height="200">
-              <p><b>SABÃO EM PÓ PARA ROUPAS:</b> Vendido em embalagem de 1,6kg.</p>
-              <p>Valor: R$19,70</p>
-            </div>
-            <div class="detergente">
-              <img src="imagens\detergente.jpeg" alt="Detergente" width="200" height="200">
-              <p><b>DETERGENTE PARA LOUÇA:</b> Vendido em embalagem de 500mL.</p>
-              <p>Valor: R$3,60</p>
-            </div>
-          </section>
+        <div class="container-fluid">
+          <div class="row">
+              <!-- Coluna Lateral (Menu) -->
+              <aside class="col-md-3 bg-light p-3">
+                <h4 class="menu">Menu</h4>
+                <ul class="list-unstyled">
+                  <li><a href="index.html" class="btn btn-warning">Home</a></li>
+                  <li><hr/></li>
+                  <li><a href="cadastro.html" class="btn btn-warning">Cadastro</a></li>
+                  <li><hr/></li>
+                  <li><a href="carrinho.html" class="btn btn-warning">Carrinho de Compras</a>
+                  </li>
+                </ul>
+              </aside>
+              <!-- Coluna Principal (Conteúdo) -->
+              <main class="col-md-9">          
+                <section id="carousel-section">
+                  <h5>Destaques Higiene e Limpeza</h5>
+                  <div id="carouselHigieLimp" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                    <!-- Produto 1 (Creme Dental) -->
+                    <div class="carousel-item active">
+                      <img src="imagens/cremedental.jpeg" class="d-block w-100" alt="Creme_Dental">
+                      <div class="carousel-caption">
+                        <h4>Creme Dental</h4>
+                        <p>R$ 6,00/90g - Aproveite!</p>
+                      </div>
+                    </div>
+                    <!-- Produto 2 (Sabonete em Barra) -->
+                    <div class="carousel-item">
+                      <img src="imagens/sabonete.png" class="d-block w-100" alt="Sabonete_Barra">
+                      <div class="carousel-caption">
+                        <h4>Sabonete em Barra</h4>
+                        <p>R$ 5,10 - Aproveite!</p>
+                      </div>
+                      <!-- Produto 3 (Detergente) -->
+                    <div class="carousel-item">
+                      <img src="imagens/cremedental.jpeg" class="d-block w-100" alt="Creme_Dental">
+                      <div class="carousel-caption">
+                        <h4>Creme Dental</h4>
+                        <p>R$ 6,00/90g - Aproveite!</p>
+                      </div>
+                    </div>
+                    <!-- Produto 4 (Lava Roupas em Pó) -->
+                    <div class="carousel-item">
+                      <img src="imagens/sabaoempo.jpg" class="d-block w-100" alt="Lava_Roupas_em_Po">
+                      <div class="carousel-caption">
+                        <h4>Lava Roupas em Pó</h4>
+                        <p>R$ 19,70/1,6kg - Aproveite!</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselHigieLimp" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselHigieLimp" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                  </button>
+                </div>
+              </section>
+              <hr/>
+              <section id="products-section">
+                <h5>Todos os Produtos</h5>
+                <!-- Categoria Higiene -->
+                <h3>Higiene</h3>
+                <div class="row">
+                  <div class="col-md-4 product-card" data-category="higiene">
+                    <img src="imagens/sabonete.png" alt="Sabonete_em_Barra" class="img-fluid">
+                    <h4>Sabonete em Barra</h4>
+                    <p>Vendido em pacote com 5 unidades.</p>
+                    <p><b>Valor:</b> R$15,10</p>
+                    <button class="btn btn-primary add-to-cart" data-id="11" data-name="SaboneteBarra" data-price="15.10">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                  <div class="col-md-4 product-card" data-category="higiene">
+                    <img src="imagens/shampoo.png" alt="Shampoo" class="img-fluid">
+                    <h4>Shampoo</h4>
+                    <p>Vendido em embalagem com 355mL.</p>
+                    <p><b>Valor:</b> R$23,00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="12" data-name="Shampoo" data-price="23.00">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                  <div class="col-md-4 product-card" data-category="higiene">
+                    <img src="imagens/cremedental.jpeg" alt="Creme_Dental" class="img-fluid">
+                    <h4>Creme Dental</h4>
+                    <p>Vendido em embalagem de 90g.</p>
+                    <p><b>Valor:</b> R$6,00</p>
+                    <button class="btn btn-primary add-to-cart" data-id="13" data-name="CremeDental" data-price="6.00">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+                <!-- Categoria Limpeza -->
+                <h3>Limpeza</h3>
+                <div class="row">
+                  <div class="col-md-4 product-card" data-category="limpeza">
+                    <img src="imagens/desinfetante.jpg" alt="Desinfetante_Liquido" class="img-fluid">
+                    <h4>Desinfetante Líquido</h4>
+                    <p>Vendido em embalagem de 500mL.</p>
+                    <p><b>Valor:</b> R$10,20</p>
+                    <button class="btn btn-primary add-to-cart" data-id="14" data-name="DesinfetanteLiquido" data-price="10.20">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                  <div class="col-md-4 product-card" data-category="limpeza">
+                    <img src="imagens/sabaoempo.jpg" alt="Lava_Roupas_em_Po" class="img-fluid">
+                    <h4>Lava Roupas em Pó</h4>
+                    <p>Vendido em embalagem de 1,6kg.</p>
+                    <p><b>Valor:</b> R$19,70</p>
+                    <button class="btn btn-primary add-to-cart" data-id="15" data-name="LavaRoupasPo" data-price="19.70">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                  <div class="col-md-4 product-card" data-category="limpeza">
+                    <img src="imagens/detergente.jpeg" alt="Detergente" class="img-fluid">
+                    <h4>Detergente</h4>
+                    <p>Vendido em embalagem de 500mL.</p>
+                    <p><b>Valor:</b> R$3,60</p>
+                    <button class="btn btn-primary add-to-cart" data-id="16" data-name="Detergente" data-price="3.60">
+                      Adicionar ao Carrinho
+                    </button>
+                  </div>
+                </div>
+              </section>
     </main>
     <hr/>
     <footer>
@@ -89,6 +178,8 @@
             <a href="higielimp.html">| Higiene e Limpeza |</a>
             <a href="servicos.html">| Serviços |</a>
         </nav>
-    </footer>   
+    </footer> 
+    <script src="./renderer.js"></script>  
+    <script src="cart.js"></script>  
 </body>
 </html>
