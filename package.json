@@ -27,6 +27,6 @@
   },
   "homepage": "https://github.com/electron/electron-quick-start#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.4"
   }
 }
